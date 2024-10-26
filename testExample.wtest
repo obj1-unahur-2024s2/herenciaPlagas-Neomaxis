@@ -1,9 +1,13 @@
-import example.pepita
+import plaga.*
 
-describe "group of tests for pepita" {
+describe "group of tests for Plagas" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "Plaga de pulgas ataca a Rulo" {
+    const rulo = new Mascota(salud=300)
+    const pulgas1 = new Pulgas(poblacion=10)
+    pulgas1.atacar(rulo)
+    assert.equals(280, rulo.salud())
+    assert.that(rulo.esBueno())
   }
 
 }
